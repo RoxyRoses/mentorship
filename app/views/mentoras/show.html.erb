@@ -6,5 +6,12 @@
 
 <p> habilidades</p>
 <h1><%=@mentora.habilidades%></h1>
-<%=link_to 'voltar',mentoras_path%>
+
+<%=link_to 'voltar', mentoras_path%>
+
+<%=link_to 'Editar', edit_mentora_path(@mentora)%>
+
+<%=link_to 'Excluir', mentora_path(@mentora), data: {"turbo-method": :delete}%>
+
+
 
