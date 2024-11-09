@@ -1,2 +1,15 @@
-<h1>Mentoras#edit</h1>
-<p>Find me in app/views/mentoras/edit.html.erb</p>
+<h1>Editar Mentora</h1>
+
+<form method="post" action="<%=mentora_path(@mentora)%>">
+    <label for="mentora[nome]">Nome</label>
+    <input type="text" name="mentora[nome]" value="<%=@mentora.nome%>">
+
+    <label for="mentora[contato]">Contato</label>
+    <input type="text" name="mentora[contato]" value="<%=@mentora.contato%>">
+
+    <label for="mentora[habilidades]">Habilidades</label>
+    <textarea name="mentora[habilidades]"><%=@mentora.habilidades%></textarea>
+
+    <input type="hidden" value="PATCH" name="_method">
+    <input type="submit" value="Editar">
+</form>
