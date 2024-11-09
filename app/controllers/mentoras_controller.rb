@@ -11,6 +11,8 @@ class MentorasController < ApplicationController
   end
 
   def create
+    Mentora.create!(mentora_params)
+    redirect_to mentoras_path
   end
 
   def edit
@@ -20,5 +22,11 @@ class MentorasController < ApplicationController
   end
 
   def destroy
+  end
+
+  private 
+
+  def mentora_params
+    params.require(:mentora).permit(:nome, :contato, :habilidades)
   end
 end

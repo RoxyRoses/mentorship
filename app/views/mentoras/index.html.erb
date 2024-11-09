@@ -1,6 +1,9 @@
 <h1>Mentoras</h1>
 
+<%=link_to "Criar Mentora", new_mentora_path%>
+
 <%@mentoras.each do |mentora|%>
     <p><%=mentora.nome%></p>
 <%end%>
+
     
