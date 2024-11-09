@@ -1,10 +1,10 @@
 class MentorasController < ApplicationController
-
   def index
     @mentoras = Mentora.all
   end
 
   def show
+    @mentora = Mentora.find(params[:id])
   end
 
   def new
@@ -24,7 +24,7 @@ class MentorasController < ApplicationController
   def destroy
   end
 
-  private 
+  private
 
   def mentora_params
     params.require(:mentora).permit(:nome, :contato, :habilidades)
